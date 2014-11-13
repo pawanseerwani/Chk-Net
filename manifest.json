@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Check Internet",
+  "description": "This extension checks your Internet Connection every 3 seconds",
+  "version": "1.0",
+  "browser_action": {
+    "badge": "down",
+    "default_icon": "offline-icon.png",
+    "default_title": "Internet is down",
+    "default_popup": "popup.html"
+  },
+  "background":{
+  "scripts":["background.js"]
+  }
+}
