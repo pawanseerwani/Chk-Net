@@ -27,14 +27,7 @@ function failure()
   }
 }
 
-function testNet(){
-  if(navigator.onLine)
-    success();
-  else
-  failure();
-}
-
-function testNet2()
+function testNet()
 {
   var i = new Image();
   i.onload = success;
