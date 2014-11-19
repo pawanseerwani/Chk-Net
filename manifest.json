@@ -5,12 +5,20 @@
   "description": "This extension checks your Internet Connection every 3 seconds",
   "version": "1.0",
   "browser_action": {
-    "badge": "down",
+    "badge": "down from browser_action",
     "default_icon": "offline-icon.png",
     "default_title": "Internet is down",
-    "default_popup": "popup.html"
+    //"default_popup": "popup.html"
   },
+  "permissions": [
+    "http://www.google.com/"
+  ],
   "background":{
-  "scripts":["background.js"]
+  "scripts":["vendor/jquery-1.11.1.min.js", "background.js"]
+  },
+  "icons": {
+    "16": "online-icon.png",
+    "48": "online-icon.png",
+    "128": "online-icon.png"
   }
 }
