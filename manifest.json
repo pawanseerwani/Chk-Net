@@ -9,11 +9,8 @@
     "default_icon": "offline-icon.png",
     "default_title": "Internet is down"
   },
-  "permissions": [
-    "http://www.google.com/"
-  ],
   "background":{
-  "scripts":["vendor/jquery-1.11.1.min.js", "background.js"]
+    "scripts":["background.js"]
   },
   "icons": {
     "16": "online-icon.png",

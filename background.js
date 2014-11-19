@@ -11,8 +11,8 @@ function success()
   console.log("online-image");
   if (showed_online_alert == false)
   {
-    showed_online_alert = true;
     alert("online");
+    showed_online_alert = true;
   }
 }
 
@@ -28,8 +28,8 @@ function failure()
   console.log("offline-image");
   if (showed_offline_alert == false)
   {
+    alert("offline");
     showed_offline_alert = true;    
-    alert("offline"); 
   }
 }
 
