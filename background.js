@@ -4,26 +4,32 @@ console.log("inside bg.js");
 
 function success()
 {
-  show_alert = false;
+  showed_offline_alert = false;
   chrome.browserAction.setIcon({ path: 'online-icon.png'})
   chrome.browserAction.setBadgeBackgroundColor({ color: [0, 255, 0, 255] });
   chrome.browserAction.setBadgeText({text: 'Up'});
   console.log("online-image");
+  if (showed_online_alert == false)
+  {
+    showed_online_alert = true;
+    alert("online");
+  }
 }
 
-var show_alert = false;
+var showed_offline_alert = false;
+var showed_online_alert = false;
 
 function failure()
 {
+  showed_online_alert = false;
   chrome.browserAction.setIcon({ path: 'offline-icon.png'})
   chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
   chrome.browserAction.setBadgeText({text: 'Down'});
   console.log("offline-image");
-  if (show_alert == false)
+  if (showed_offline_alert == false)
   {
-    show_alert = true;    
+    showed_offline_alert = true;    
     alert("offline"); 
-
   }
 }
 
