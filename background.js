@@ -1,6 +1,5 @@
-chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
-chrome.browserAction.setBadgeText({text: 'Down'});
-console.log("inside bg.js");
+var showed_offline_alert = false;
+var showed_online_alert = false;
 
 function success()
 {
@@ -8,7 +7,7 @@ function success()
   chrome.browserAction.setIcon({ path: 'online-icon.png'})
   chrome.browserAction.setBadgeBackgroundColor({ color: [0, 255, 0, 255] });
   chrome.browserAction.setBadgeText({text: 'Up'});
-  console.log("online-image");
+  console.log("online");
   if (showed_online_alert == false)
   {
     alert("online");
@@ -16,16 +15,13 @@ function success()
   }
 }
 
-var showed_offline_alert = false;
-var showed_online_alert = false;
-
 function failure()
 {
   showed_online_alert = false;
   chrome.browserAction.setIcon({ path: 'offline-icon.png'})
   chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
   chrome.browserAction.setBadgeText({text: 'Down'});
-  console.log("offline-image");
+  console.log("offline");
   if (showed_offline_alert == false)
   {
     alert("offline");
